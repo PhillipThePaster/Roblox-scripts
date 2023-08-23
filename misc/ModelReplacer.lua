@@ -29,7 +29,7 @@
 		chr.Head.Transparency = 1
 		chr.HumanoidRootPart.Transparency = 0
 
-
+--remove from here if you want furry model
 	local hrp = chr:WaitForChild("HumanoidRootPart")
 	hrp.BrickColor = BrickColor.new("Really Blue")
 	local fuckingmesh = Instance.new("SpecialMesh")
@@ -39,3 +39,12 @@
 		fuckingmesh.TextureId = "1"
 		fuckingmesh.MeshId = 'rbxassetid://6789346871'
 		fuckingmesh.Scale = Vector3.new(0.15000000596046448, 0.1300000101327896, 0.1300000101327896)
+
+--{Furry Model}--
+--[[	local hrp = chr:WaitForChild("HumanoidRootPart")
+	local fuckingmesh = Instance.new("SpecialMesh")
+		fuckingmesh.Parent = hrp
+		fuckingmesh.TextureId = "rbxassetid://3279148584"
+		fuckingmesh.MeshId = 'rbxassetid://3279148402'
+		fuckingmesh.Scale = Vector3.new(0.15000000596046448, 0.1300000101327896, 0.1300000101327896 
+]]--
