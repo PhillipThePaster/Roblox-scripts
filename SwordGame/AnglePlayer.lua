@@ -16,13 +16,13 @@ local function findClosestPlayer()
         end
     end
     
-    return closestPlayer
+    return closestPlayer, closestDistance
 end
 
 local function rotateToClosestPlayer()
-    local closestPlayer = findClosestPlayer()
+    local closestPlayer, closestDistance = findClosestPlayer()
     
-    if closestPlayer then
+    if closestPlayer and closestDistance <= 100 then --change this for min distance 
         local playerPos = player.Character.HumanoidRootPart.Position
         local targetPos = closestPlayer.Character.HumanoidRootPart.Position
         local horizontalLookVector = (targetPos - playerPos)
@@ -39,5 +39,7 @@ connection = RunService.RenderStepped:Connect(function()
     rotateToClosestPlayer()
 end)
 
--- if you want it to stop doing it just run this 
+
+
+-- To stop it, you can call:
 -- connection:Disconnect()
